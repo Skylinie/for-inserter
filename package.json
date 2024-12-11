@@ -1,0 +1,42 @@
+{
+  "name": "for-loop-inserter",
+  "displayName": "for loop inserter",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+        {
+            "command": "extension.replaceWithForLoop",
+            "title": "Replace with For Loop"
+        }
+    ],
+    "keybindings": [
+        {
+            "command": "extension.replaceWithForLoop",
+            "key": "cmd+r",
+            "when": "editorTextFocus"
+        }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "eslint": "^9.16.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
